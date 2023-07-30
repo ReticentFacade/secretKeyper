@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+#############################################################################################################################################################
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. BASIC FEATURES:
+
+    1.1 User Authentication:
+        ✔ Register @done (30/07/2023, 13:50:02)
+            ✔ Use AES encryption for password @done (30/07/2023, 13:50:03)
+        ✔ Login @done (30/07/2023, 22:11:41)
+            ✔ Use AES decryption for password @done (30/07/2023, 22:11:39)
+
+    1.2 Strength Analysis:
+        ✔ Password can only be 6-20 characters long @done (30/07/2023, 22:31:34)
+        ✔ Password must contain at least one uppercase letter @done (30/07/2023, 22:31:34)
+        ✔ Password must contain at least one lowercase letter @done (30/07/2023, 22:31:35)
+        ✔ Password must contain at least one number @done (30/07/2023, 22:31:36)
+        ✔ Password must contain at least one special character @done (30/07/2023, 22:33:21)
+        ✔ Password must not contain any spaces @done (30/07/2023, 22:34:06)
+        ✔ If password uses user's name: @done (31/07/2023, 01:14:40)
+            ✔ Display lower strength (yellow) @done (31/07/2023, 01:14:41)
+
+        ✔ Display password strength (red, yellow, green) when user stops typing @done (31/07/2023, 01:14:57)
+        
+    1.3 Password Encryption: 
+        ✔ Encrypt passwords before storing in database @done (31/07/2023, 01:15:16)
+
+    1.4 Password Storage: 
+        ✔ Store passwords in database - use mongodb @done (31/07/2023, 01:15:20)
+
+    1.5 Password Decryption:
+        ☐ Allow users to view their stored passwords by decrypting them using a MASTER password/key
+
+--------------------------------------------------------------------------------
+################################################################################
+--------------------------------------------------------------------------------
+
+2. INTERMEDIATE FEATURES:
+    ☐ Two-factor authentication: use Google Authenticator: Implement 2FA functionality to enhance account security.
+    ☐ Browser extension: to integrate the password manager directly into web forms
+    ☐ Password Sharing: enable sharing with trusted contacts
+    ☐ Password Generator: generate strong passwords
+
+
+--------------------------------------------------------------------------------
+################################################################################
+--------------------------------------------------------------------------------
+
+3. ADVANCED FEATURES:
+    ☐ Store credit card details
+        ☐ Use BCRYPT hashing to encrypt credit card details safely
+    ☐ Store personal notes? Not sure about this one. 🙁
+    ☐ Password Strength Recommendation: provide users with suggestions to improve their passsword strength.
+
+    ☐ Offline access?
+    ☐ Cross-platform synchronization/access?
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+#############################################################################################################################################################
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
