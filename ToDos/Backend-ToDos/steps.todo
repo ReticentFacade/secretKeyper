@@ -31,16 +31,23 @@
     1.5 Password Decryption:
         ☐ Allow users to view their stored passwords by decrypting them using a MASTER password/key
 
+    1.6 Pw Storage Model: 
+        ☐ 
+
 --------------------------------------------------------------------------------
 ################################################################################
 --------------------------------------------------------------------------------
 
 2. INTERMEDIATE FEATURES:
+
+    2.1:
     ☐ Two-factor authentication: use Google Authenticator: Implement 2FA functionality to enhance account security.
     ☐ Browser extension: to integrate the password manager directly into web forms
     ☐ Password Sharing: enable sharing with trusted contacts
     ☐ Password Generator: generate strong passwords
 
+    2.2:
+        ☐ Create a CLI-version of this app?
 
 --------------------------------------------------------------------------------
 ################################################################################
