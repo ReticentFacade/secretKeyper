@@ -2,7 +2,7 @@ import User from "../../models/User.js";
 import { aesEncrypt, aesDecrypt } from "../helpers/encryption.js";
 import { jwtGenerateToken, jwtVerifyToken } from "../helpers/jwtToken.js";
 import checkPassword from "../helpers/checkPassword.js";
-import { checkUsername } from "../middleware/checkUsername.js";
+import { checkUsername } from "../../middleware/checkUsername.js";
 
 const register = async (req, res) => {
   try {
@@ -49,7 +49,7 @@ const login = async (req, res) => {
 
     // Check if username exists:
     const user = await checkUsername(username);
-    
+
     // Decrypt the stored password
     const decryptedPassword = aesDecrypt(user.password);
 
