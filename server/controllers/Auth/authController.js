@@ -2,6 +2,7 @@ import User from "../../models/User.js";
 import { aesEncrypt, aesDecrypt } from "../helpers/encryption.js";
 import { jwtGenerateToken, jwtVerifyToken } from "../helpers/jwtToken.js";
 import checkPassword from "../helpers/checkPassword.js";
+import { checkUsername } from "../middleware/checkUsername.js";
 
 const register = async (req, res) => {
   try {
@@ -46,11 +47,9 @@ const login = async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    const user = await User.findOne({ username });
-    if (!user) {
-      console.log("Oops! User not found");
-      res.status(404).json({ message: "User not found" });
-    }
+    // Check if username exists:
+    const user = await checkUsername(username);
+    
     // Decrypt the stored password
     const decryptedPassword = aesDecrypt(user.password);
 
