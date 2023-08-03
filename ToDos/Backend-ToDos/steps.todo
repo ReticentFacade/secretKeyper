@@ -32,7 +32,12 @@
         ☐ Allow users to view their stored passwords by decrypting them using a MASTER password/key
 
     1.6 Pw Storage Model: 
-        ☐ 
+        ☐ Create credentials schema/collection to store user credentials
+        ☐ Link the username of the logged in user to their credentials-collection
+        ☐ `/credentials` route has three options: 
+            ☐ 1. View
+            ☐ 2. Edit (add, update) 
+            ☐ 3. Delete
 
 --------------------------------------------------------------------------------
 ################################################################################

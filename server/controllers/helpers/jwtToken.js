@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import { localStorage } from "../Auth/authController.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -31,12 +32,14 @@ const jwtGenerateToken = (userId, res) => {
   }
 };
 
-const jwtVerifyToken = (token) => {
+const jwtVerifyToken = (localStorage) => {
+// const jwtVerifyToken = () => {
   try {
+    const token = localStorage.getItem("jwt");
     const decodedToken = jwt.verify(token, process.env.SECRET_KEY);
 
     console.log("Decoded token: ", decodedToken);
-    return decoded.id;
+    return decodedToken.id;
   } catch (err) {
     console.log("Error verifying token: ", err.message);
     throw new Error("Invalid or expired token: ");
