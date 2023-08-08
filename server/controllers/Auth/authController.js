@@ -3,9 +3,6 @@ import { aesEncrypt, aesDecrypt } from "../helpers/encryption.js";
 import { jwtGenerateToken, jwtVerifyToken } from "../helpers/jwtToken.js";
 import checkPassword from "../helpers/checkPassword.js";
 import { checkUsername } from "../../middleware/checkUsername.js";
-import { LocalStorage } from "node-localstorage";
-
-const localStorage = new LocalStorage("./scratch");
 
 const register = async (req, res) => {
   try {
@@ -59,12 +56,6 @@ const login = async (req, res) => {
       console.log("User logged in successfully: ", user);
       console.log("Token generated and saved 😈 ----> \n", token);
 
-      const check = localStorage.setItem("jwt", token);
-      console.log("Check: ", check);
-      // if (localStorage.getItem("jwt")) {
-      //   console.log("Token saved in scratch successfully");
-      // }
-
       // The next two lines just deal with token-verification after authentication. Use if needed, later.
       // Verify the token:
       const verifyToken = jwtVerifyToken(token);
@@ -85,8 +76,4 @@ const login = async (req, res) => {
   }
 };
 
-export {
-  register,
-  login,
-  localStorage,
-};
+export { register, login };

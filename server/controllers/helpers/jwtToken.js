@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-import { localStorage } from "../Auth/authController.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -32,10 +31,10 @@ const jwtGenerateToken = (userId, res) => {
   }
 };
 
-const jwtVerifyToken = (localStorage) => {
-// const jwtVerifyToken = () => {
+// const jwtVerifyToken = (localStorage) => {
+const jwtVerifyToken = () => {
   try {
-    const token = localStorage.getItem("jwt");
+    // const token = localStorage.getItem("jwt");
     const decodedToken = jwt.verify(token, process.env.SECRET_KEY);
 
     console.log("Decoded token: ", decodedToken);
