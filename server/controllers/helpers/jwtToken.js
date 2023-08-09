@@ -31,17 +31,15 @@ const jwtGenerateToken = (userId, res) => {
   }
 };
 
-// const jwtVerifyToken = (localStorage) => {
-const jwtVerifyToken = () => {
+const jwtVerifyToken = (token) => {
   try {
-    // const token = localStorage.getItem("jwt");
     const decodedToken = jwt.verify(token, process.env.SECRET_KEY);
 
     console.log("Decoded token: ", decodedToken);
     return decodedToken.id;
   } catch (err) {
     console.log("Error verifying token: ", err.message);
-    throw new Error("Invalid or expired token: ");
+    return null;
   }
 };
 

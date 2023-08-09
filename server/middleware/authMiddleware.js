@@ -4,18 +4,22 @@ dotenv.config();
 
 const authMiddleware = async (req, res, next) => {
   try {
-    const jwt_secret_key = process.env.JWT_SECRET_KEY;
+    console.log("authMiddleware running...");
 
-    // const token = localStorage.getItem("jwt");
+    const token = req.session.authToken; // get token from the session
+    console.log("Token from session: ", token);
+    if (!token) {
+      return res
+        .status(401)
+        .json({ message: "Access denied. Bro, log in first :)" });
+    }
 
-    // if (!token) {
-    //   return res
-    //     .status(401)
-    //     .json({ message: "Access denied. Please log-in first." });
-    // }
+    const decoded = await jwtVerifyToken(token);
+    if (!decoded) {
+      return res.status(401).json({ message: "Invalid or expired token 😞 " });
+    }
 
-    const decoded = await jwtVerifyToken(token, jwt_secret_key);
-    // Attach the decoded user information to the request object for further use in other middleware or route handlers.
+    // Attaching the decoded user information to the request object for further use in other middleware or route handlers
     req.user = decoded;
 
     next();
@@ -25,4 +29,4 @@ const authMiddleware = async (req, res, next) => {
   }
 };
 
-export default authMiddleware;
+export { authMiddleware };

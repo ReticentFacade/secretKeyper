@@ -35,13 +35,13 @@ export function aesEncrypt(data) {
 // Decrypt data:
 export function aesDecrypt(encryptedData) {
   try {
+    console.log("Starting decryption...");
     const buff = Buffer.from(encryptedData, "base64");
     const decipher = crypto.createDecipheriv(
       ENCRYPTION_METHOD,
       key,
       encryptionIV
     );
-
     return (
       decipher.update(buff.toString("utf8"), "hex", "utf8") +
       decipher.final("utf8")

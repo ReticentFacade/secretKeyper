@@ -56,15 +56,23 @@ const login = async (req, res) => {
       console.log("User logged in successfully: ", user);
       console.log("Token generated and saved 😈 ----> \n", token);
 
+      // Save the token to the session:
+      req.session.authToken = token;
+      req.session.save();
+      console.log("Token saved to session: ", req.session.authToken);
+      console.log("Session data:", req.session);
+
       // The next two lines just deal with token-verification after authentication. Use if needed, later.
       // Verify the token:
       const verifyToken = jwtVerifyToken(token);
-      if (verifyToken) {
-        // grabToken();
+      if (verifyToken !== null) {
         console.log("Token verified successfully: ", verifyToken);
+        console.log("User authenticated successfully :)");
         res.status(200).json({ message: "User logged in successfully" });
+        // User is authenticated.
       } else {
         console.log("Oops! Token verification failed");
+        // Because of invalid/expired token. HANDLE it.
       }
     } else {
       console.log("Oops! Wrong password");
