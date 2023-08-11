@@ -1,4 +1,4 @@
-{ TOTP = Time-based One Time Password }
+# ToDo: 
 
 ☐ Endpoints: 
     ☐ POST ----> `/api/auth/otp/generate` -----> Generates the TOTP Secret
