@@ -1,4 +1,4 @@
-## Sample curl command for `/deleteCredentials` route: 
+### Sample curl command for `/deleteCredentials` route: 
 
 Format: 
 ```

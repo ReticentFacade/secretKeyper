@@ -1,4 +1,4 @@
-## Sample curl command for adding credentials into db: 
+### Sample curl command for adding credentials into db: 
 Format: 
 ```
 curl -X POST -H "Content-Type: application/json" -H "x-auth-token: <your_jwt_token>" -d '{

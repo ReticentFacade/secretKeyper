@@ -1,4 +1,4 @@
-## Sample curl command for `/getCredentials` route: 
+### Sample curl command for `/getCredentials` route: 
 
 - `/getCredentials` uses `req.query` format to *get* input so it should be as follows:
 
