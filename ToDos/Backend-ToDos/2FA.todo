@@ -1,0 +1,7 @@
+{ TOTP = Time-based One Time Password }
+
+☐ Endpoints: 
+    ☐ POST ----> `/api/auth/otp/generate` -----> Generates the TOTP Secret
+    ☐ POST ----> `/api/auth/otp/verify`   -----> Verifies TOTP Token
+    ☐ POST ----> `/api/auth/otp/validate` -----> Validates TOTP Token
+    ☐ POST ----> `/api/auth/otp/disable`  -----> Disables 2FA Feature
