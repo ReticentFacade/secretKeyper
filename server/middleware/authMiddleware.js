@@ -4,17 +4,19 @@ dotenv.config();
 
 const authMiddleware = async (req, res, next) => {
   try {
+    // Right now just using jwt-token to verify, instead of session-tokens
     console.log("authMiddleware running...");
 
-    const token = req.session.authToken; // get token from the session
-    console.log("Token from session: ", token);
+    const jwt_secret_key = process.env.JWT_SECRET_KEY;
+
+    const token = req.header("x-auth-token"); // IF TOKEN IS SENT IN THE HEADER
     if (!token) {
       return res
         .status(401)
         .json({ message: "Access denied. Bro, log in first :)" });
     }
 
-    const decoded = await jwtVerifyToken(token);
+    const decoded = await jwtVerifyToken(token, jwt_secret_key);
     if (!decoded) {
       return res.status(401).json({ message: "Invalid or expired token 😞 " });
     }

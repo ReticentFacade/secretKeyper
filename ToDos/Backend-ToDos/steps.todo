@@ -27,17 +27,18 @@
 
     1.4 Password Storage: 
         ✔ Store passwords in database - use mongodb @done (31/07/2023, 01:15:20)
+        ✔ Store passwords in encrypted format @done (10/08/2023, 21:57:50)
 
     1.5 Password Decryption:
-        ☐ Allow users to view their stored passwords by decrypting them using a MASTER password/key
+        ✔ Allow users to view their stored passwords by decrypting them using a MASTER password/key @done (10/08/2023, 22:47:37)
 
     1.6 Pw Storage Model: 
-        ☐ Create credentials schema/collection to store user credentials
-        ☐ Link the username of the logged in user to their credentials-collection
-        ☐ `/credentials` route has three options: 
-            ☐ 1. View
-            ☐ 2. Edit (add, update) 
-            ☐ 3. Delete
+        ✔ Create credentials schema/collection to store user credentials @done (10/08/2023, 22:52:04)
+        ✔ Link the username of the logged in user to their credentials-collection @done (10/08/2023, 22:52:07)
+        ✔ `/credentials` route has three options: @done (11/08/2023, 12:48:11)å
+            ✔ 1. View @done (10/08/2023, 22:52:10)
+            ✔ 2. Edit (add, update) @done (11/08/2023, 12:48:09)
+            ✔ 3. Delete @done (11/08/2023, 12:48:09)
 
 --------------------------------------------------------------------------------
 ################################################################################
@@ -52,7 +53,9 @@
     ☐ Password Generator: generate strong passwords
 
     2.2:
-        ☐ Create a CLI-version of this app?
+        ☐ Create a CLI-version of this app
+            - AAAAAAHHHHH - There's already this thing: https://www.youtube.com/watch?v=FhwsfH2TpFA 
+            [https://www.passwordstore.org/]
 
 --------------------------------------------------------------------------------
 ################################################################################
@@ -67,6 +70,8 @@
     ☐ Offline access?
     ☐ Cross-platform synchronization/access?
 
+
+    ☐ Store session-details as cookies in browser (sessionID in an HTTP cookie on the client's browser)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 #############################################################################################################################################################

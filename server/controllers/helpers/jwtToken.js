@@ -13,7 +13,7 @@ const jwtGenerateToken = (userId, res) => {
       {
         id: userId,
       },
-      process.env.SECRET_KEY,
+      process.env.JWT_SECRET_KEY,
       {
         expiresIn: "1d",
       }
@@ -33,7 +33,7 @@ const jwtGenerateToken = (userId, res) => {
 
 const jwtVerifyToken = (token) => {
   try {
-    const decodedToken = jwt.verify(token, process.env.SECRET_KEY);
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET_KEY);
 
     console.log("Decoded token: ", decodedToken);
     return decodedToken.id;
