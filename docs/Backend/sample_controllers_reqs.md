@@ -38,12 +38,12 @@ curl -X GET -H "x-auth-token: <your-jwt-token>" "http://localhost:5000/api/crede
 ```
 
 Example: 
-```
+```js
 curl -X GET -H "x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDMyM2E1ZjIzMmU5NDQ4MmQwOGRhMyIsImlhdCI6MTY5MTY4NDU5MiwiZXhwIjoxNjkxNzcwOTkyfQ.U1mnyhAp_riccCe_qQnjicgitAZvvM7Mp916jvfhBbI" "http://localhost:5000/api/credentials/getCredentials?username=elle&website=www.github.com" | json
 ```
 
 Output: 
-```
+```json
 {
   "password": "thisIsForGithub"
 }
@@ -85,7 +85,7 @@ curl -X POST -H "Content-Type: application/json" -H "x-auth-token: eyJhbGciOiJIU
 ```
 
 Output: 
-```
+```json
 Credentials saved successfully :)
  {
   username: 'elle',
@@ -111,12 +111,12 @@ curl -X PUT -H "x-auth-token: <your-jwt-token> -d "username=<your-username>&webs
 ```
 
 Example: 
-```
+```js
 curl -X PUT -H "x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDMyM2E1ZjIzMmU5NDQ4MmQwOGRhMyIsImlhdCI6MTY5MTcyNjI0MywiZXhwIjoxNjkxODEyNjQzfQ.3le184iAXC-9MClhun4M4A-6yLyzymQW7RGaUVmnJbU" -d "username=elle&website=www.github.com&newPassword=newGithubPw" http://localhost:5000/api/credentials/updateCredentials | json
 ```
 
 Output: 
-```
+```js
 Credentials updated successfully :) {
   _id: new ObjectId("64d50f89b13a8530ff896eb0"),
   username: 'elle',
