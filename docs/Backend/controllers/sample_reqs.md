@@ -11,7 +11,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "Ms. Mortal", "use
 ```
 ------
 
-## Login User: 
+## Login User: `/login`
 Example:
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"username": "karmaBitch", "password": "karmaIsABitch_9"}' http://localhost:5000/api/auth/login | json
