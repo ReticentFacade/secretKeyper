@@ -35,7 +35,7 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
 
 - Routes --> [click here](./docs/Backend/routes.md)
 - Sample `.env` --> [click here](./docs/Backend/sample_env.md)
-- Sample AUTH-requests --> [click here](./docs/Backend/sample_reqs/controller_reqs.md)
+- Sample AUTH-requests --> [click here](./docs/Backend/sample_reqs/controllers_reqs.md)
 - Sample OTP-requests --> [click here](./docs/Backend/sample_reqs/otp_reqs.md)
 
 ---
