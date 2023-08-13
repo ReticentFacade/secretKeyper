@@ -3,6 +3,7 @@ import { aesEncrypt, aesDecrypt } from "../helpers/encryption.js";
 import { jwtGenerateToken, jwtVerifyToken } from "../helpers/jwtToken.js";
 import checkPassword from "../helpers/checkPassword.js";
 import { checkUsername } from "../../middleware/checkUsername.js";
+import { generateOTPSecret } from "../2FA/generateOTPSecret.controller.js";
 
 const register = async (req, res) => {
   try {
@@ -23,15 +24,17 @@ const register = async (req, res) => {
     };
     const user = await User.create(data);
 
-    let token; // declaring the variable here 'cause it's access outside the 'if' block
     if (user) {
+      const otpSecret = await generateOTPSecret(username);
+      console.log("This is otpSecret: ", otpSecret);
+      
       // jwtGenerateToken will generate token AND set the token as a (res.)cookie:
-      token = jwtGenerateToken(user._id, res);
+      let token = jwtGenerateToken(user._id, res);
+      
+      console.log("User saved successfully: \n", user);
+      console.log("Token generated 😈 ----> \n", token);
+      res.status(201).json({ message: "User saved successfully" });
     }
-
-    console.log("User saved successfully: \n", user);
-    console.log("Token generated 😈 ----> \n", token);
-    res.status(201).json({ message: "User saved successfully" });
   } catch (err) {
     console.error("Error creating user: ", err.message);
     res.status(500).json({ message: err.message });
