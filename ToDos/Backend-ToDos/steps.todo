@@ -47,16 +47,18 @@
 2. INTERMEDIATE FEATURES:
 
     2.1:
-    ☐ Two-factor authentication: use Google Authenticator: Implement 2FA functionality to enhance account security.
+    ✔ Two-factor authentication: Implement 2FA functionality to enhance account security. @done (13/08/2023, 14:38:06)
+        - Google Authenticator?
+    
+    2.2:
+        ☐ Create a CLI-version of this app
+        - AAAAAAHHHHH - There's already this thing: https://www.youtube.com/watch?v=FhwsfH2TpFA 
+        [https://www.passwordstore.org/]
+    
+    2.3:
     ☐ Browser extension: to integrate the password manager directly into web forms
     ☐ Password Sharing: enable sharing with trusted contacts
     ☐ Password Generator: generate strong passwords
-
-    2.2:
-        ☐ Create a CLI-version of this app
-            - AAAAAAHHHHH - There's already this thing: https://www.youtube.com/watch?v=FhwsfH2TpFA 
-            [https://www.passwordstore.org/]
-
 --------------------------------------------------------------------------------
 ################################################################################
 --------------------------------------------------------------------------------

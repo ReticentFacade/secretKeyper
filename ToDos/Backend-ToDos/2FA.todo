@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 { TOTP = Time-based One Time Password }
 
 ☐ Endpoints: 
@@ -5,3 +6,42 @@
     ☐ POST ----> `/api/auth/otp/verify`   -----> Verifies TOTP Token
     ☐ POST ----> `/api/auth/otp/validate` -----> Validates TOTP Token
     ☐ POST ----> `/api/auth/otp/disable`  -----> Disables 2FA Feature
+=======
+# ToDo: 
+
+------------------------------------------------------------------------------------------------------------
+✔ Endpoints: @done (13/08/2023, 12:29:27)                                                                   | 
+    ✔ POST ----> `/api/auth/otp/generate` -----> Generates the TOTP Secret @done (13/08/2023, 09:54:00)     |
+    ✔ POST ----> `/api/auth/otp/verify`   -----> Verifies TOTP Token @done (13/08/2023, 11:12:17)           |
+    ✔ POST ----> `/api/auth/otp/validate` -----> Validates TOTP Token @done (13/08/2023, 12:18:10)          |
+    ✔ POST ----> `/api/auth/otp/disable`  -----> Disables 2FA Feature @done (13/08/2023, 12:29:11)          | 
+------------------------------------------------------------------------------------------------------------
+
+✔ GenerateOTPSecret @done (12/08/2023, 18:04:36)
+    ✔ Every time a new user registers, an otpSecret is created and saved in 'otp' collections @done (12/08/2023, 17:58:48)
+
+✔ GenerateOTP: @done (13/08/2023, 09:53:34)
+    ✔ Params: username, email @done (13/08/2023, 10:03:07)
+    ✔ Retrieve the specific user's otpSecret from the database @done (13/08/2023, 09:53:26)
+    ✔ User that otpSecret to generate a Time-based OTP (TOTP) (Use current time as the TOTP's input) @done (13/08/2023, 09:53:31)
+    ✔ Generate an HTML email template that includes the OTP @done (13/08/2023, 09:53:42)
+    ✔ Send the OTP to the user's email address (Use nodemailer) @done (13/08/2023, 09:53:36)
+
+✔ VerifyOTP: @done (13/08/2023, 12:18:06)
+✔ Params: username, token @done (13/08/2023, 11:12:18)
+    ✔ Retrieve the specific user's otpSecret from the database @done (13/08/2023, 11:12:19)
+    ✔ Use the otpSecret to verify the TOTP Token @done (13/08/2023, 11:12:34)
+    ✔ Add a `is_2fa_enabled` field in the user model @done (13/08/2023, 12:28:08)
+    ✔ If the TOTP Token is verified, then set the `is_2fa_enabled` field to true in the user model @done (13/08/2023, 12:17:57)
+
+✔ ValidateOTP: @done (13/08/2023, 12:17:54)
+    ✔ Params: username, token @done (13/08/2023, 12:17:55)
+    ✔ Retrieve the specific user's otpSecret from the database @done (13/08/2023, 12:17:56)
+    ✔ Use the otpSecret to verify the TOTP Token @done (13/08/2023, 12:17:56)
+
+✔ DisableOTP: @done (13/08/2023, 12:28:03)
+    ✔ Params: username @done (13/08/2023, 12:28:02)
+    ✔ Update the `is_2fa_enabled` field to false in the user model @done (13/08/2023, 12:28:02)
+
+✔ Hash the TOTP Secret before storing it in the database @done (13/08/2023, 14:37:59)
+>>>>>>> 2FA

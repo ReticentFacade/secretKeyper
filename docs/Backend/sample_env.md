@@ -1,21 +1,24 @@
 # Sample env:
+
 ```
 DB_NAME=secretKeyper_db
 DB_USER=admin
-DB_PASS=supersecretpassword
+DB_PASS=supers*cretp*ssword
 
-# Not sure about this one: 
-DB_HOST=cluster0.rxqnsw6.mongodb.net
-
-MONGODB_URI=mongodb+srv://admin:supersecretpassword@cluster0.rxqnsw6.mongodb.net/secretKeyper_db?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://admin:secretpassword@cluster0.rxqnsw6.mongodb.net/secretKeyper_db?retryWrites=true&w=majority
 
 PORT=5000
-NODE_ENV=d*v*lopment
-JWT_SECRET=jwts*cr*tkey
-SECRET_KEY=supersecretkey
-SECRET_IV=supers*cr*tiv
+NODE_ENV=development
+JWT_SECRET_KEY=jwts*cr*tkey
+SECRET_KEY=supers*cretk*y
+SECRET_IV=supersecretiv
 ENCRYPTION_METHOD=aes-256-cbc
 
 # For express-session: 
-SESSION_SECRET=mysecretsessionkey
+SESSION_SECRET=mys*cr*tsess*onkey
+
+# For 2FA:
+USER_EMAIL=<YOUR-EMAIL-ADDRESS>@gmail.com
+USER_PASSWORD=yeacukngihorehmz<YOUR-EMAIL-PASSWORD>
+
 ```
