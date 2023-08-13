@@ -1,6 +1,8 @@
 import speakeasy from "speakeasy";
 import nodemailer from "nodemailer";
 import { retrieveOTPSecret } from "../helpers/retrieveOTPSecret.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const generateOTP = async (req, res) => {
   try {
@@ -23,16 +25,14 @@ const generateOTP = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail", 
       auth: {
-        // REPLACE WITH ENV VARIABLES!!!!!!
-        user: "chiya2911@gmail.com",
-        pass: "yeacukngihorehmz",
+        user: process.env.USER_EMAIL,
+        pass: process.env.USER_PASSWORD,
       },
     });
     console.log("transporter: ", transporter);
 
     const mailOptions = {
-      // REPLACE WITH ENV VARIABLES!!!!!!
-      from: "chiya2911@gmail.com",
+      from: process.env.USER_EMAIL,
       to: email, // User's registered email address
       subject: "Your OTP for Two-Factor Authentication",
       html: `<p>Your OTP is: ${totp}</p>`,
