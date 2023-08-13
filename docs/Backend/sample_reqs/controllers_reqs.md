@@ -49,7 +49,7 @@ Output:
 }
 ```
 
-```
+```sh
 [nodemon] starting `node server.js`
 sessionMiddleware running...
 Successfully connected to MongoDB...
@@ -85,7 +85,7 @@ curl -X POST -H "Content-Type: application/json" -H "x-auth-token: eyJhbGciOiJIU
 ```
 
 Output: 
-```json
+```sh
 Credentials saved successfully :)
  {
   username: 'elle',
@@ -116,7 +116,7 @@ curl -X PUT -H "x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Z
 ```
 
 Output: 
-```json
+```sh
 Credentials updated successfully :) {
   _id: new ObjectId("64d50f89b13a8530ff896eb0"),
   username: 'elle',
@@ -146,7 +146,7 @@ curl -X DELETE -H "x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ij
 ```
 
 Output: 
-```json
+```sh
 Credentials deleted successfully: 🥳  {
   _id: new ObjectId("64d50c8cec6cf9d88ee365b7"),
   username: 'batman',
