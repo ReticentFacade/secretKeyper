@@ -9,7 +9,7 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
 ## Application:
 
 - API
-- CLI: For those who prefer commands over conversations
+- CLI: For those who prefer commands over conversations 😼 
 <!-- - CLI: If terminal is your idea of a cozy place  -->
 
 ## Tech used
