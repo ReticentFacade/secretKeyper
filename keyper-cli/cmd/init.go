@@ -1,15 +1,14 @@
 /*
 Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
 	"fmt"
-	"os"
 	"log"
+	"os"
 
-	"github.com/ReticentFacade/secretKeyper/keyper-cli/utils"
+	"github.com/ReticentFacade/secretKeyper/blob/cli/keyper-cli/utils/utils.go"
 	"github.com/spf13/cobra"
 )
 
@@ -22,21 +21,21 @@ var initCmd = &cobra.Command{
 		Description --> Initializes a .secretKeyper directory in your home directory`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("init called..")
-		
+
 		// Get the user's ./secretKeyper directory
-		secretKeyperDir := GetKeyperDir();
-		
-		// Check if it exists already or not: 
-		_, err := os.Stat(secretKeyperDir); 
+		secretKeyperDir := GetKeyperDir()
+
+		// Check if it exists already or not:
+		_, err := os.Stat(secretKeyperDir)
 		if os.IsNotExist(err) {
-			// Create it, if it doesn't: 
-			errDir := os.Mkdir(secretKeyperDir, 0700);
+			// Create it, if it doesn't:
+			errDir := os.Mkdir(secretKeyperDir, 0700)
 			if err != nil {
-				log.Fatal("Error creating .secretKeyper directory", err);
+				log.Fatal("Error creating .secretKeyper directory", err)
 			}
-			fmt.Println("Created .secretKeyper directory at: ", secretKeyperDir);
+			fmt.Println("Created .secretKeyper directory at: ", secretKeyperDir)
 		} else {
-			fmt.Println("Directory already exists at: ", secretKeyperDir);
+			fmt.Println("Directory already exists at: ", secretKeyperDir)
 		}
 	},
 }
