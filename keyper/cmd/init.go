@@ -23,13 +23,13 @@ var initCmd = &cobra.Command{
 		fmt.Println("init called..")
 
 		// Get the user's ./secretKeyper directory
-		secretKeyperDir := GetKeyperDir()
+		secretKeyperDir := utils.GetKeyperDir()
 
 		// Check if it exists already or not:
 		_, err := os.Stat(secretKeyperDir)
 		if os.IsNotExist(err) {
 			// Create it, if it doesn't:
-			errDir := os.Mkdir(secretKeyperDir, 0700)
+			err := os.Mkdir(secretKeyperDir, 0700)
 			if err != nil {
 				log.Fatal("Error creating .secretKeyper directory", err)
 			}

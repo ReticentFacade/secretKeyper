@@ -4,7 +4,7 @@
     ☐ Returns all the commands available in the app
 
   1.1. keyper init: 
-    ☐ Create a directory named `.secretKeyper` in the home directory
+    ✔ Create a directory named `.secretKeyper` in the home directory @done (15/08/2023, 22:31:18)
 
   1.2. keyper insert <website>:
   ☐ ask for directory input from user
