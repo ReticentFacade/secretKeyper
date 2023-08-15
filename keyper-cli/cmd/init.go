@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/ReticentFacade/secretKeyper/blob/cli/keyper-cli/utils/utils.go"
+	"github.com/ReticentFacade/keyper-cli/utils"
 	"github.com/spf13/cobra"
 )
 
