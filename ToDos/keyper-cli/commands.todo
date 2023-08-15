@@ -40,7 +40,7 @@
    - Example: `keyper find instagram` should return a tree structure for all passwords related to instagram
 
 2. GnuPG:
-  2.1. keyper init GPG_Key_ID:
+  2.1. keyper init GPG_KEY_ID:
    ☐ Add a feature to generate a GPG key and store it in a file (also remotely, in the db)
    ☐ Should downloading this app automatically generate a GPG key for the user?
       - Or let them create a new key-pair using `gpg --gen-key`? 

@@ -38,11 +38,7 @@ curl -X GET -H "x-auth-token: <your-jwt-token>" "http://localhost:5000/api/crede
 ```
 
 Example: 
-<<<<<<< HEAD:docs/Backend/sample_controllers_reqs.md
-```js
-=======
 ```sh
->>>>>>> 2FA:docs/Backend/sample_reqs/controllers_reqs.md
 curl -X GET -H "x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDMyM2E1ZjIzMmU5NDQ4MmQwOGRhMyIsImlhdCI6MTY5MTY4NDU5MiwiZXhwIjoxNjkxNzcwOTkyfQ.U1mnyhAp_riccCe_qQnjicgitAZvvM7Mp916jvfhBbI" "http://localhost:5000/api/credentials/getCredentials?username=elle&website=www.github.com" | json
 ```
 
