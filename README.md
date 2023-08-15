@@ -1,4 +1,4 @@
-# SecretKeyper: Advanced Password Manager with 2FA
+# SecretKeyper
 
 <!-- ![Project Logo](./path/to/logo.png) -->
 
@@ -9,7 +9,8 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
 ## Application:
 
 - API
-- CLI
+- CLI: For those who prefer commands over conversations
+<!-- - CLI: If terminal is your idea of a cozy place  -->
 
 ## Tech used
 
