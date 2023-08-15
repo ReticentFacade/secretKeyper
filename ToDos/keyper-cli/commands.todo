@@ -3,24 +3,27 @@
     ☐ Returns the tree-structure of your ecretKeyper directory (i.e., all passwords you currently have)
     ☐ Returns all the commands available in the app
 
-  1.1. keyper insert <website>:
-  ☐ ask for subcategory input from user
+  1.1. keyper init: 
+    ☐ Create a directory named `.secretKeyper` in the home directory
+
+  1.2. keyper insert <website>:
+  ☐ ask for directory input from user
   ☐ create a sub-category and file as (name of site)
   ☐ ask for password input from user
   ☐ encrypt the input password in some encryption format then store it in that file
-    1.1.1. keyper insert <website>/<filename>:
+    1.2.1. keyper insert <website>/<filename>:
       ☐ Create nested files and folders
       - Example of nested files: `keyper insert instagram/personal`, `keyper insert instagram/work`
     
-  1.2. keyper extract <website>:
+  1.3. keyper extract <website>:
   ☐ look for the file in sub-categories and open the file matching the website then decrypt the password and copy it to clipboard
   ☐ (optional) as for host password for extra security
   ☐ (optional) clears the clipboard after a specific time (30 - 45 seconds)
 
-  1.3. keyper remove <website>:
+  1.4. keyper remove <website>:
   ☐ look for the file named by <website> then delete it
 
-  1.4. keyper update <website>:
+  1.5. keyper update <website>:
    ☐ look for the file named by <website>
    ☐ ask for old password (for verification)
    ☐ check if both passwords are same
@@ -28,14 +31,14 @@
    ☐ remove the password string from file
    ☐ update that string with newly encrypted password
 
-  1.4. keyper generate <website>: 
+  1.6. keyper generate <website>: 
     - (can add additional details like ask user if they want numbers and special characters in their password, blah blah)
    ☐ generate a random password and store it to file of <website>
    ☐ once password is generated, print the decrypted password once 
    ☐ copy the password to clipboard and print that as a message
    ☐ automatically insert that password to the file 
 
-  1.5. keyper find <string>:
+  1.7. keyper find <string>:
    ☐ Searches for all passwords given a string
    - Example: `keyper find instagram` should return a tree structure for all passwords related to instagram
 

@@ -5,9 +5,11 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	// "fmt"
 	"os"
 
 	"github.com/spf13/cobra"
+	// "github.com/spf13/viper"
 )
 
 
@@ -15,8 +17,8 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "keyper",
-	Short: "A CLI-tool for SecretKeyper",
-	Long: `A CLI-tool for SecretKeyper written in Golang. For those of you who type more than talk, here's a CLI-tool to keep your secrets safe.`,
+	Short: "A CLI-tool for SecretKeyper written in Golang",
+	Long: `For those of you who type more than talk, here's a golang CLI-tool to keep your secrets safe!`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -36,7 +38,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.keyper-cli.yaml)")
+	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.keyper.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
