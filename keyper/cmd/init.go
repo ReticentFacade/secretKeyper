@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/ReticentFacade/secretKeyper/keyper-cli/utils"
+	"keyper/utils"
 	"github.com/spf13/cobra"
 )
 
