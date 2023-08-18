@@ -1,7 +1,6 @@
 # SecretKeyper
 
 ![Project Logo](./logo.png)
-<!-- ![Project Logo](./secretkeyper-logo.png) -->
 
 ## Description:
 
