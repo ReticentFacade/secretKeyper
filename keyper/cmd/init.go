@@ -9,6 +9,7 @@ import (
 	"os"
 
 	"keyper/utils"
+
 	"github.com/spf13/cobra"
 )
 
@@ -20,7 +21,6 @@ var initCmd = &cobra.Command{
 		Usage --> keyper init
 		Description --> Initializes a .secretKeyper directory in your home directory`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("init called..")
 
 		// Get the user's ./secretKeyper directory
 		secretKeyperDir := utils.GetKeyperDir()
@@ -33,9 +33,10 @@ var initCmd = &cobra.Command{
 			if err != nil {
 				log.Fatal("Error creating .secretKeyper directory", err)
 			}
-			fmt.Println("Created .secretKeyper directory at: ", secretKeyperDir)
+			fmt.Println("mkdir: Created .secretKeyper directory at --> ", secretKeyperDir)
 		} else {
-			fmt.Println("Directory already exists at: ", secretKeyperDir)
+			fmt.Println("Directory already exists at --> ", secretKeyperDir)
+			fmt.Println("Password store initialized successfully")
 		}
 	},
 }
