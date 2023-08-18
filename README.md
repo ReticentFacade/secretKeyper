@@ -1,6 +1,6 @@
 # SecretKeyper
 
-<!-- ![Project Logo](./path/to/logo.png) -->
+![Project Logo](./logo.png)
 
 ## Description:
 
@@ -51,7 +51,8 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
 - [x] 2FA
 - [ ] CLI
     - [ ] `keyper`
-    - [ ] `keyper insert <website>`
+    - [x] `keyper init`
+    - [x] `keyper insert <website>`
     - [ ] `keyper extract <website>`
     - [ ] `keyper remove <website>`
     - [ ] `keyper update <website>`
