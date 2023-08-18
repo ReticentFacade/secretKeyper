@@ -7,9 +7,12 @@
     ✔ Create a directory named `.secretKeyper` in the home directory @done (15/08/2023, 22:31:18)
 
   1.2. keyper insert <website>:
-  ☐ ask for directory input from user
+  ✔ ask for directory input from user @done (18/08/2023, 10:29:30)
+  ✔ ask for pw twice - proceed only if the pw entered both times matches - maybe create a boolean: utils/validatePassword.js @done (18/08/2023, 11:57:30)
+  ✔ redirect to `keyper edit <website>/password.txt` if the user tries to overwrite an already existing password file @done (18/08/2023, 10:29:33)
   ☐ create a sub-category and file as (name of site)
-  ☐ ask for password input from user
+
+  During GPG encryption, change the type of file from "password.txt" to "password.gpg" to store the file in an encrypted format
   ☐ encrypt the input password in some encryption format then store it in that file
     1.2.1. keyper insert <website>/<filename>:
       ☐ Create nested files and folders
@@ -51,3 +54,6 @@
 
   2.1. keyper git init:
    ☐ Initialises your secretkeyper-directory as a git repository
+  
+3. ProgressBar:
+  ☐ Add a progress bar for all commands that take time to execute?

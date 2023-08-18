@@ -1,0 +1,25 @@
+Simplify and rewrite: 
+
+✔ - Before checking all these conditions, you need the following input: @done (17/08/2023, 12:40:34)
+        ✔ - Directory's name, i.e., <website> @done (17/08/2023, 12:40:33)
+        ✔ - Read password @done (17/08/2023, 11:41:07)
+        ✔ -----> Have a different function to check if pw file exists or not? Like, a bool? Same to check different kinda directories? @done (18/08/2023, 09:33:43)
+        
+    Case #1: 
+    Directory doesnt exist. 
+    No need to check pw file, coz that wouldnt exist either, if the directory doesnt exist in the 1st place.
+    So --->
+        ✔ Create dir @done (17/08/2023, 12:59:03)
+        ✔ Inside dir, create pwfile. @done (18/08/2023, 09:55:57)
+    
+    Case #2:
+    Directory exists. 
+        Case #2.1:
+        Pwfile does not exist.
+        So --> 
+            ✔ Go inside dir, create pwfile @done (18/08/2023, 10:29:46)
+        
+        Case #2.2:
+        Pwfile exists.
+        So -->
+            ✔ Log: Cannot overwrite already existing pwfile with this command. Use `keyper edit ${website}` instead. @done (18/08/2023, 10:29:48)

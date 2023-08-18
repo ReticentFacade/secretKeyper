@@ -59,5 +59,6 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
     - [ ] `keyper find <website>`
     - [ ] `keyper init <GPG_KEY_ID>`
     - [ ] `keyper git init`
+    - [ ] Progressbar?
 - [ ] Generator
 - [ ] Extension
