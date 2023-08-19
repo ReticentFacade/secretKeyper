@@ -68,7 +68,7 @@ func CreatePasswordFile(filePath string, password string) (string, error) {
 
 	_, err = passwordFile.Write([]byte(password))
 	if err != nil {
-		return "", fmt.Errorf("error writing password to file: %w\n", err)
+		return "", fmt.Errorf("error writing password to file: %w", err)
 	}
-	return "Password file successfully created!", nil
+	return "\nPassword file successfully created!", nil
 }

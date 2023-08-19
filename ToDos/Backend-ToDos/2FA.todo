@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-{ TOTP = Time-based One Time Password }
-
-☐ Endpoints: 
-    ☐ POST ----> `/api/auth/otp/generate` -----> Generates the TOTP secret
-    ☐ POST ----> `/api/auth/otp/verify`   -----> Verifies TOTP Token
-    ☐ POST ----> `/api/auth/otp/validate` -----> Validates TOTP Token
-    ☐ POST ----> `/api/auth/otp/disable`  -----> Disables 2FA Feature
-=======
 # ToDo: 
 
 ------------------------------------------------------------------------------------------------------------
@@ -44,4 +35,3 @@
     ✔ Update the `is_2fa_enabled` field to false in the user model @done (13/08/2023, 12:28:02)
 
 ✔ Hash the TOTP Secret before storing it in the database @done (13/08/2023, 14:37:59)
->>>>>>> 2FA

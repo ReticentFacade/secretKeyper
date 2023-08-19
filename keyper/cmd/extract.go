@@ -5,6 +5,12 @@ package cmd
 
 import (
 	"fmt"
+	"log"
+	"os"
+
+	// "io/ioutil"
+	"keyper/utils"
+	"path/filepath"
 
 	"github.com/spf13/cobra"
 )
@@ -14,9 +20,56 @@ var extractCmd = &cobra.Command{
 	Use:   "extract",
 	Short: "A brief description of your command",
 	Long: `Usage: 
-	keyper extract <website>/password`,
+	keyper extract <website>/password
+	
+	Extracts the password for a website from its folder.
+	If the website's folder has sub-directories, it extracts passwords from those as well.`,
+	Args: cobra.ExactArgs(1), // Expects one argument (i.e. website name)
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("extract called...")
+		secretKeyperDir := utils.GetKeyperDir()
+		// Obtain the website name from the argument
+		websiteDir := filepath.Join(secretKeyperDir, args[0])
+
+		// - Check if the websiteDir exists
+		dirExists, _ := utils.IfDirExists(websiteDir)
+		if dirExists {
+			pwFilePath := filepath.Join(websiteDir, "password.txt")
+			pwFileExists, _ := utils.IfFileExists(pwFilePath)
+
+			// - If it does, check if it has a password file
+			if pwFileExists {
+				// - If it does, read the password file
+				pw, err := os.ReadFile(pwFilePath)
+				if err != nil {
+					log.Fatal("error reading password file:", err)
+				} else {
+					fmt.Println("\nYour password is: ", string(pw))
+					go utils.CopyToClipboard(string(pw))
+					if err != nil {
+						log.Fatal("Error copying password to clipboard:", err)
+					}
+				}
+			}
+			// - If it doesn't, check if it has sub-directories
+			subDirExists, err := utils.CheckSubDir(websiteDir)
+			if err != nil {
+				fmt.Println("Error:", err)
+			} else if subDirExists {
+				// - If it does, read the password files from those sub-directories
+				subDirList, _ := utils.ListSubDirs(websiteDir)
+				fmt.Println(subDirList) // Print the list of subdirectories
+			} else {
+				// - If it doesn't, print an error message
+				fmt.Println("No subdirectories found in the directory.")
+			}
+		} else {
+			// - If it doesn't, print an error message
+			log.Fatal("Error: Website doesn't exist.")
+			return
+		}
+
+		// Automatically clear the clipboard after 90 seconds
+		go utils.ClearClipboardAfterDelay(90)
 	},
 }
 

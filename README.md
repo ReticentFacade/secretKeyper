@@ -40,18 +40,17 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
 - Sample OTP-requests --> [click here](./docs/Backend/sample_reqs/otp_reqs.md)
 
 #### CLI: 
-
+- Automatically copies extracted passwords/text to your clipboard
 ```
 ➜  ~ keyper list
 
-Available commands ---->
-- completion
-- extract
-- help
-- init
-- insert
-- keyper
-- list
+  Available commands ---->
+  - help
+  - list
+  - keyper
+  - init
+  - insert
+  - extract
 ```
 
 ---
@@ -69,7 +68,8 @@ Available commands ---->
     - [x] `keyper list`
     - [x] `keyper init`
     - [x] `keyper insert <website>`
-    - [ ] `keyper extract <website>`
+    - [x] `keyper extract <website>`
+      - [ ] Fix clipboard-thingy
     - [ ] `keyper remove <website>`
     - [ ] `keyper update <website>`
     - [ ] `keyper generate <website>`

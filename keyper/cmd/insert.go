@@ -70,7 +70,7 @@ var insertCmd = &cobra.Command{
 		// ##########################################################################
 
 		// CASE 2: Dir = ✓
-		// Steps: Go into dir, checkPwFile, if yes true don't create, if false then create pw file.
+		// Steps: Go into dir, checkPwFile, if true then don't create, if false then create pw file.
 
 		pwFilePath := filepath.Join(websiteDir, "password.txt")
 		if dirExists {
