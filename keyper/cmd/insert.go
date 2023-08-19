@@ -43,11 +43,10 @@ var insertCmd = &cobra.Command{
 		if err != nil {
 			log.Fatal("Error executing utils.ReadPassword: ", err)
 		}
-		fmt.Println("\nPassword read successfully!")
 		fmt.Println("Dw, Imma use: ", password)
 
 		websiteDir := filepath.Join(secretKeyperDir, website)
-		dirExists, err := utils.IfDirExists(websiteDir)
+		dirExists, _ := utils.IfDirExists(websiteDir)
 
 		// ##########################################################################
 

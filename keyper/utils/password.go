@@ -22,7 +22,6 @@ func matchStrings(str1, str2 string) (bool, error) {
 }
 
 func ReadPassword() (string, error) {
-	fmt.Println("utils.ReadPassword is running... ")
 
 	fmt.Printf("Enter password: ")
 	// TODO: Re-enter password & match both entries LATER

@@ -26,7 +26,7 @@ func CreateDir(dirPath string) (string, error) {
 	if os.IsNotExist(err) {
 		err := os.MkdirAll(dirPath, 0700)
 		if err != nil {
-			return "", fmt.Errorf("Error creating directory: %w", err)
+			return "", fmt.Errorf("error creating directory: %w", err)
 		}
 		fmt.Println("Created new directory at: ", dirPath)
 		return dirPath, nil

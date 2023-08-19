@@ -50,7 +50,8 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
 - [x] Decryption 
 - [x] 2FA
 - [ ] CLI
-    - [ ] `keyper`
+    - [x] `keyper`
+    - [x] `keyper list`
     - [x] `keyper init`
     - [x] `keyper insert <website>`
     - [ ] `keyper extract <website>`
