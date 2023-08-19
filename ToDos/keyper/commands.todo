@@ -26,13 +26,14 @@
     
   1.4. keyper extract <website>:
   ✔ look for the file in sub-categories and open the file matching the website  and copy it to clipboard @done (19/08/2023, 22:53:04)
+      ☐ ADD TAB-completion for the dir-names
       ☐ Fix clipboard-thingy
       ☐ Decrypt the password??
   ☐ (optional) ask for host password for extra security
   ✔ (optional) clears the clipboard after a specific time (30 - 45 seconds) @done (19/08/2023, 22:53:21)
 
   1.5. keyper remove <website>:
-  ☐ look for the file named by <website> then delete it
+  ✔ look for the file named by <website> then delete it @done (19/08/2023, 23:29:01)
 
   1.7. keyper update <website>:
    ☐ look for the file named by <website>
