@@ -33,11 +33,26 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
 - **Organizational Tools** --> Customize entries and categories.
 
 ---
-
+#### API: 
 - Routes --> [click here](./docs/Backend/routes.md)
 - Sample `.env` --> [click here](./docs/Backend/sample_env.md)
 - Sample AUTH-requests --> [click here](./docs/Backend/sample_reqs/controllers_reqs.md)
 - Sample OTP-requests --> [click here](./docs/Backend/sample_reqs/otp_reqs.md)
+
+#### CLI: 
+
+```
+➜  ~ keyper list
+
+Available commands ---->
+- completion
+- extract
+- help
+- init
+- insert
+- keyper
+- list
+```
 
 ---
 
@@ -62,5 +77,5 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
     - [ ] `keyper init <GPG_KEY_ID>`
     - [ ] `keyper git init`
     - [ ] Progressbar?
-- [ ] Generator
+- [ ] Link CLI with API
 - [ ] Extension
