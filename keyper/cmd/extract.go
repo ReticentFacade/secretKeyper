@@ -18,7 +18,7 @@ import (
 // extractCmd represents the extract command
 var extractCmd = &cobra.Command{
 	Use:   "extract",
-	Short: "A brief description of your command",
+	Short: "Extracts your password from the website's folder",
 	Long: `Usage: 
 	keyper extract <website>/password
 	
@@ -44,7 +44,10 @@ var extractCmd = &cobra.Command{
 					log.Fatal("error reading password file:", err)
 				} else {
 					fmt.Println("\nYour password is: ", string(pw))
-					go utils.CopyToClipboard(string(pw))
+					// Copy the generated password to the clipboard
+					_ = utils.CopyToClipboard(string(pw))
+
+					fmt.Println("Password copied to clipboard!")
 					if err != nil {
 						log.Fatal("Error copying password to clipboard:", err)
 					}

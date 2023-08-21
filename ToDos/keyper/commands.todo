@@ -27,7 +27,10 @@
   1.4. keyper extract <website>:
   ✔ look for the file in sub-categories and open the file matching the website  and copy it to clipboard @done (19/08/2023, 22:53:04)
       ☐ ADD TAB-completion for the dir-names
-      ☐ Fix clipboard-thingy
+      ☐ Fix clipboard-thing
+        - https://stackoverflow.com/questions/17178617/how-to-use-the-clipboard-in-go
+        - https://github.com/mattn/go-gtk/blob/master/_example/clipboard/clipboard.go
+
       ☐ Decrypt the password??
   ☐ (optional) ask for host password for extra security
   ✔ (optional) clears the clipboard after a specific time (30 - 45 seconds) @done (19/08/2023, 22:53:21)
@@ -36,19 +39,19 @@
   ✔ look for the file named by <website> then delete it @done (19/08/2023, 23:29:01)
 
   1.7. keyper update <website>:
-   ☐ look for the file named by <website>
-   ☐ ask for old password (for verification)
-   ☐ check if both passwords are same
-   ☐ if both are same then ask for new password input
-   ☐ remove the password string from file
-   ☐ update that string with newly encrypted password
+   ✔ look for the file named by <website> @done (21/08/2023, 10:47:13)
+   ✔ ask for old password (for verification) @done (21/08/2023, 10:56:26)
+   ✔ check if both passwords are same @done (21/08/2023, 10:56:28)
+   ✔ if both are same then ask for new password input @done (21/08/2023, 10:56:29)
+   ✔ remove the password string from file @done (21/08/2023, 10:56:32)
+   ✔ update that string with newly password @done (21/08/2023, 10:56:41)
 
   1.7. keyper generate <website>: 
     - (can add additional details like ask user if they want numbers and special characters in their password, blah blah)
-   ☐ generate a random password and store it to file of <website>
+   ✔ generate a random password and store it to file of <website> @done (21/08/2023, 12:37:28)
    ☐ once password is generated, print the decrypted password once 
-   ☐ copy the password to clipboard and print that as a message
-   ☐ automatically insert that password to the file 
+   ✔ copy the password to clipboard and print that as a message @done (21/08/2023, 12:37:21)
+   ✔ automatically insert that password to the file @done (21/08/2023, 12:42:21)
 
   1.8. keyper find <string>:
    ☐ Searches for all passwords given a string

@@ -18,7 +18,7 @@ var removeFile bool
 // removeCmd represents the remove command
 var removeCmd = &cobra.Command{
 	Use:   "remove",
-	Short: "A brief description of your command",
+	Short: "Remove a website directory or its password file directly, using flags",
 	Long: `Usage:
 	keyper remove <website>          - Remove the website directory and its contents
 	keyper remove --file <website>   - Remove the password.txt file from the website directory`,

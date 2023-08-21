@@ -85,7 +85,7 @@ var insertCmd = &cobra.Command{
 					}
 				} else {
 					// CASE 2.2: File = ✓
-					fmt.Println(`Cannot overwrite already existing pwfile with this command. Use "keyper edit <website>" instead`)
+					fmt.Println(`Cannot overwrite already existing pwfile with this command. Use "keyper update <website>" instead`)
 					return
 				}
 			} else {

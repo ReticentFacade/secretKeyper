@@ -16,7 +16,7 @@ var listCmd = &cobra.Command{
 	Long: `Usage ----> 
 	keyper list`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Available commands ---->")
+		fmt.Println("\n Available commands ---->")
 		for _, c := range rootCmd.Commands() {
 			fmt.Println("-", c.Name())
 		}

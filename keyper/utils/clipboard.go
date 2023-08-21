@@ -7,12 +7,8 @@ import (
 	"github.com/atotto/clipboard"
 )
 
-func CopyToClipboard(str string) error {
-	fmt.Println("Password copied to clipboard for 90 seconds.")
-	err := clipboard.WriteAll(str)
-	if err != nil {
-		fmt.Println("Error copying to clipboard:", err)
-	}
+func CopyToClipboard(text string) error {
+	err := clipboard.WriteAll(text)
 	return err
 }
 
