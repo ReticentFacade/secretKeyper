@@ -69,11 +69,11 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
     - [x] `keyper init`
     - [x] `keyper insert <website>`
     - [x] `keyper extract <website>`
-      - [ ] Fix clipboard-thing
+      - [x] Fix clipboard-thing
     - [x] `keyper remove <website>`
     - [x] `keyper update <website>`
-    - [ ] `keyper generate <website>`
-    - [ ] `keyper find <website>`
+    - [x] `keyper generate <website>`
+    - [x] `keyper find <website>`
     - [ ] `keyper init <GPG_KEY_ID>`
     - [ ] `keyper git init`
     - [ ] Add progress-bar (?)

@@ -54,8 +54,8 @@
    ✔ automatically insert that password to the file @done (21/08/2023, 12:42:21)
 
   1.8. keyper find <string>:
-   ☐ Searches for all passwords given a string
-   - Example: `keyper find instagram` should return a tree structure for all passwords related to instagram
+   ✔ Searches for all passwords given a string @done (21/08/2023, 12:49:07)
+      - Example: `keyper find instagram` should return a tree structure for all passwords related to instagram
 
 2. GnuPG:
   2.1. keyper init GPG_KEY_ID:
