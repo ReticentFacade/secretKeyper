@@ -51,6 +51,10 @@ SecretKeyper is a secure password manager designed to keep your sensitive inform
   - init
   - insert
   - extract
+  - remove
+  - update
+  - generate
+  - find
 ```
 
 ---
