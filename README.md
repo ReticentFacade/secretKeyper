@@ -70,7 +70,7 @@ SecretKeyper is an open source secure password manager designed to keep your sen
 
 # Contributing
 
-We appreciate your interest in contributing to secretKeyper. Whether you're a developer, designer, or just a user with feedback, there are many ways to get involved and help us improve this project.
+I appreciate your interest in contributing to secretKeyper. Whether you're a developer, designer, or just a user with feedback, there are many ways to get involved and help us improve this project.
 
 ### Ways to Contribute
 
