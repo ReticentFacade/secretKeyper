@@ -20,10 +20,7 @@ var extractCmd = &cobra.Command{
 	Use:   "extract",
 	Short: "Extracts your password from the website's folder",
 	Long: `Usage: 
-	keyper extract <website>/password
-	
-	Extracts the password for a website from its folder.
-	If the website's folder has sub-directories, it extracts passwords from those as well.`,
+	keyper extract <website>/password		 - Extracts the password for a website from its folder. If the website's folder has sub-directories, it extracts passwords from those as well.`,
 	Args: cobra.ExactArgs(1), // Expects one argument (i.e. website name)
 	Run: func(cmd *cobra.Command, args []string) {
 		secretKeyperDir := utils.GetKeyperDir()

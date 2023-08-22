@@ -16,7 +16,7 @@ import (
 // initCmd represents the init command
 var initCmd = &cobra.Command{
 	Use:   "init",
-	Short: "A brief description of your command",
+	Short: "Initializes a .secretKeyper directory in your system's home directory",
 	Long: `
 		Usage --> keyper init
 		Description --> Initializes a .secretKeyper directory in your home directory`,
