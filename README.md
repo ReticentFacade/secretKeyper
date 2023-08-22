@@ -55,17 +55,14 @@ SecretKeyper is an open source secure password manager designed to keep your sen
   - init
   - insert
   - extract
-<<<<<<< HEAD
   - remove
   - update
   - generate
   - find
-=======
   - find
   - remove
   - update
   - generate
->>>>>>> cli
 ```
 
 # Contributing
