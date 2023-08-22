@@ -71,7 +71,7 @@ I appreciate your interest in contributing to secretKeyper. There are many ways 
 
 - **Feature Requests**: Have an idea for a new feature or improvement? Feel free to suggest it by opening an issue.
 
-- **Code Contributions**: If you're a developer, you can fork the repository, make your changes, and create a pull request. We welcome code contributions of all sizes.
+- **Code Contributions**: If you're a developer, you can fork the repository, make your changes, and create a pull request.
 
 - **Documentation**: Improving documentation is always helpful. If you find areas where the documentation can be enhanced, please submit a pull request.
 
@@ -103,7 +103,7 @@ $ task run
 
 #### Test the App
 
-```sh
+```
 $ ./bin/keyper
 For those of you who type more than talk, here's a Golang CLI-tool to keep your secrets safe!
 
