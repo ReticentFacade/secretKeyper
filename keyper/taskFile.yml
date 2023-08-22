@@ -1,0 +1,17 @@
+version: "3"
+
+tasks:
+    build:
+        desc: Build the keyper CLI
+        cmds:
+        - GOFLAGS=-mod=mod go build -o bin/keyper main.go
+
+    run:
+        desc: Run the keyper CLI
+        cmds:
+        - GOFLAGS=-mod=mod go build -o bin/keyper main.go
+
+    clean:
+        desc: Clean up temporary files
+        cmds:
+        - rm *.tmp
