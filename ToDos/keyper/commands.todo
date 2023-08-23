@@ -69,3 +69,7 @@
   
 3. ProgressBar:
   ☐ Add a progress bar for all commands that take time to execute?
+
+4. Link API to CLI:
+  ☐ Add a feature to link the CLI to the API
+  ☐ Add a feature to link the CLI to the DB

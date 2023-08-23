@@ -61,20 +61,6 @@ SecretKeyper is an open source secure password manager designed to keep your sen
   - generate
 ```
 
-# Contributing
-
-I appreciate your interest in contributing to secretKeyper. There are many ways to get involved and help improve this project.
-
-### Ways to Contribute
-
-- **Bug Reports**: If you find a bug or issue, please [open a GitHub issue](https://github.com/ReticentFacade/secretKeyper/issues) with a detailed description.
-
-- **Feature Requests**: Have an idea for a new feature or improvement? Feel free to suggest it by opening an issue.
-
-- **Code Contributions**: If you're a developer, you can fork the repository, make your changes, and create a pull request.
-
-- **Documentation**: Improving documentation is always helpful. If you find areas where the documentation can be enhanced, please submit a pull request.
-
 ## Getting Started
 
 #### Build the App
@@ -187,3 +173,17 @@ source ~/.bashrc
   - [ ] Add progress-bar (?)
 - [ ] Link CLI with API
 - [ ] Extension
+
+# Contributing
+
+I appreciate your interest in contributing to secretKeyper. There are many ways to get involved and help improve this project.
+
+### Ways to Contribute
+
+- **Bug Reports**: If you find a bug or issue, please [open a GitHub issue](https://github.com/ReticentFacade/secretKeyper/issues) with a detailed description.
+
+- **Feature Requests**: Have an idea for a new feature or improvement? Feel free to suggest it by opening an issue.
+
+- **Code Contributions**: If you're a developer, you can fork the repository, make your changes, and create a pull request.
+
+- **Documentation**: Improving documentation is always helpful. If you find areas where the documentation can be enhanced, please submit a pull request.
