@@ -14,7 +14,7 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "keyper",
-	Short: "A CLI-tool for SecretKeyper written in Golang",
+	Short: "A CLI-utility for SecretKeyper written in Golang",
 	Long:  `For those of you who type more than talk, here's a Golang CLI-tool to keep your secrets safe!`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:

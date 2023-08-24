@@ -6,9 +6,11 @@
 
 SecretKeyper is an open source secure password manager designed to keep your sensitive information safe while providing the convenience of easy access. With integrated 2FA, your stored data is doubly protected against unauthorized access.
 
+[Click here to read why you should consider centralizing your `.env` management](https://medium.com/@tony.infisical/the-death-of-the-env-file-6d65bfc6ac5e)
+
 ## Application:
 
-- API
+- API & Web server
 - CLI: For those who prefer commands over conversations 😼
 <!-- - CLI: If terminal is your idea of a cozy place  -->
 
@@ -34,7 +36,7 @@ SecretKeyper is an open source secure password manager designed to keep your sen
 
 ---
 
-#### API:
+#### API & Web server:
 
 - Routes --> [click here](./docs/Backend/routes.md)
 - Sample `.env` --> [click here](./docs/Backend/sample_env.md)
@@ -60,6 +62,10 @@ SecretKeyper is an open source secure password manager designed to keep your sen
   - update
   - generate
 ```
+
+## Current State 
+- The API & CLI are ready to be used individually. 
+- However, their integration is under development. Some important features (to make the user-experience smoother) are yet to be implemented.
 
 ## Getting Started
 
@@ -176,7 +182,7 @@ source ~/.bashrc
 
 # Contributing
 
-I appreciate your interest in contributing to secretKeyper. There are many ways to get involved and help improve this project.
+I appreciate your interest in contributing to the project. There are many ways to get involved and help improve this project.
 
 ### Ways to Contribute
 
