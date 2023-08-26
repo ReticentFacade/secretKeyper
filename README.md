@@ -69,7 +69,7 @@ SecretKeyper is an open source secure password manager designed to keep your sen
 
 ## Getting Started
 
-####Build the App
+#### Build the App
 
 ```
 $ go build -o bin/keyper main.go
