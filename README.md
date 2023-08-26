@@ -2,7 +2,7 @@
 
 ![Project Logo](./logo.png)
 
-## Description:
+## 🧪 Description:
 
 SecretKeyper is an open source secure password manager designed to keep your sensitive information safe while providing the convenience of easy access. With integrated 2FA, your stored data is doubly protected against unauthorized access.
 
@@ -63,13 +63,13 @@ SecretKeyper is an open source secure password manager designed to keep your sen
   - generate
 ```
 
-## Current State 
+## 📦 Current State 
 - The API & CLI are ready to be used individually. 
 - However, their integration is under development. Some important features (to make the user-experience smoother) are yet to be implemented.
 
 ## Getting Started
 
-#### Build the App
+####Build the App
 
 ```
 $ go build -o bin/keyper main.go
@@ -155,7 +155,7 @@ source ~/.bashrc
 ```
 4. VOILA! You're ready to go! 😎
 
-## TODO:
+## 📝 TODO:
 
 - [x] Authentication
 - [x] Strength
@@ -175,12 +175,13 @@ source ~/.bashrc
   - [x] `keyper generate <website>`
   - [x] `keyper find <website>`
   - [ ] `keyper init <GPG_KEY_ID>`
-  - [ ] `keyper git init`
+  - [ ] Integrate git for automatic synchronization between multiple machines
+    - [ ] `keyper git init`
   - [ ] Add progress-bar (?)
 - [ ] Link CLI with API
 - [ ] Extension
 
-# Contributing
+# 🤝 Contributing
 
 I appreciate your interest in contributing to the project. There are many ways to get involved and help improve this project.
 
