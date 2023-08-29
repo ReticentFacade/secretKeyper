@@ -36,7 +36,7 @@ var initCmd = &cobra.Command{
 			fmt.Println("mkdir: Created .secretKeyper directory at --> ", secretKeyperDir)
 		} else {
 			fmt.Println("Directory already exists at --> ", secretKeyperDir)
-			fmt.Println("Password store initialized successfully")
+			fmt.Println("SecretKeyper initialized successfully")
 		}
 	},
 }

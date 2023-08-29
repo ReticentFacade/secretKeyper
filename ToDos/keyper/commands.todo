@@ -15,7 +15,7 @@
 
     ***** x - x - x - x - ******
 
-    During GPG encryption, change the type of file from "password.txt" to "password.gpg" to store the file in an encrypted format
+    During GPG encryption, change the type of file from "password.txt" to "password.txt.gpg" to store the file in an encrypted format
       ☐ encrypt the input password in some encryption format then store it in that file
     
     ***** x - x - x - x - ******
@@ -27,7 +27,7 @@
   1.4. keyper extract <website>:
   ✔ look for the file in sub-categories and open the file matching the website  and copy it to clipboard @done (19/08/2023, 22:53:04)
       ☐ ADD TAB-completion for the dir-names
-      ☐ Fix clipboard-thing
+      ✔ Fix clipboard-thing @done (28/08/2023, 15:50:06)
         - https://stackoverflow.com/questions/17178617/how-to-use-the-clipboard-in-go
         - https://github.com/mattn/go-gtk/blob/master/_example/clipboard/clipboard.go
 
@@ -59,6 +59,20 @@
 
 2. GnuPG:
   2.1. keyper init GPG_KEY_ID:
+   ☐ Provide them with a choice:
+   - Select one of the following options:
+      1. I want Keyper to generate a new GPG key for me
+      2. I already have a GPG key.
+
+      Case 1:
+        - generate GPG_KEY_ID in the background 
+        ☐ fmt.Println(On it!)
+      Case 2: 
+        ☐ Please use `keyper init <GPG_KEY_ID>` :)
+
+   ☐ Store the generated key locally and remotely 
+
+
    ☐ Add a feature to generate a GPG key and store it in a file (also remotely, in the db)
    ☐ Should downloading this app automatically generate a GPG key for the user?
       - Or let them create a new key-pair using `gpg --gen-key`? 
@@ -68,7 +82,7 @@
    ☐ Initialises your secretkeyper-directory as a git repository
   
 3. ProgressBar:
-  ☐ Add a progress bar for all commands that take time to execute?
+  ☐ Add a progress bar for all commands that take time to execute
 
 4. Link API to CLI:
   ☐ Add a feature to link the CLI to the API
