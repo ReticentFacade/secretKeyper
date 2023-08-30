@@ -43,7 +43,6 @@ var insertCmd = &cobra.Command{
 		if err != nil {
 			log.Fatal("Error executing utils.ReadPassword: ", err)
 		}
-		fmt.Println("Dw, Imma use: ", password)
 
 		// Get the GPG key ID from the .gpg-id file
 		gpgKeyIDFile := filepath.Join(secretKeyperDir, ".gpg-id")
@@ -69,7 +68,6 @@ var insertCmd = &cobra.Command{
 				if err != nil {
 					log.Fatal("Error encrypting password: ", err)
 				}
-				fmt.Println("Encrypted password and saved as: ", pwFilePath+".gpg")
 			} else {
 				log.Fatal("Error creating directory ----> \n", err)
 			}
@@ -89,11 +87,10 @@ var insertCmd = &cobra.Command{
 				if !pwFileExists {
 
 					// Encrypt the password using the stored GPG key ID
-					err := utils.EncryptWithGPG(password, gpgKeyID, pwFilePath+".gpg") // Use the same file path with .gpg extension
+					err := utils.EncryptWithGPG(password, gpgKeyID, pwFilePath) // Use the same file path with .gpg extension
 					if err != nil {
 						log.Fatal("Error encrypting password: ", err)
 					}
-					fmt.Println("Encrypted password and saved as: ", pwFilePath+".gpg")
 				} else {
 					// CASE 2.2: File = ✓
 					fmt.Println(`Cannot overwrite already existing pwfile with this command. Use "keyper update <website>" instead`)

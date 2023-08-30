@@ -73,7 +73,7 @@
           Case 2: 
             ☐ Please use `keyper init <GPG_KEY_ID>` :)
 
-   ☐ Store the generated key locally and remotely 
+   ☐ Store the generated key locally and remotely
 
 
    ☐ Add a feature to generate a GPG key and store it in a file (also remotely, in the db)
@@ -81,10 +81,10 @@
       - Or let them create a new key-pair using `gpg --gen-key`? 
 
   2.1. keyper git init:
-   ☐ Initialises your secretkeyper-directory as a git repository
+   ✔ Initialises your secretkeyper-directory as a git repository @done (30/08/2023, 22:09:08)
   
 3. ProgressBar:
-  ☐ Add a progress bar for all commands that take time to execute
+  ✔ Add a progress bar for commands that take time to execute @done (30/08/2023, 23:24:29)
 
 4. Link API to CLI:
   ☐ Add a feature to link the CLI to the API

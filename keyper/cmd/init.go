@@ -8,6 +8,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"time"
 
 	"keyper/utils"
 
@@ -65,6 +66,22 @@ var initCmd = &cobra.Command{
 		if err != nil {
 			log.Fatal("Error writing GPG key to file", err)
 		}
+
+		// Create a new ProgressBar
+		progressBar := utils.NewProgressBar(100)
+		progressBar.Start()
+
+		// Simulate some initialization work here
+		for i := 0; i < 100; i++ {
+			// Perform your initialization steps here
+			time.Sleep(5 * time.Millisecond)
+
+			// Increment the progress bar
+			progressBar.Increment()
+		}
+
+		// Finish the progress bar
+		progressBar.Wait()
 
 		fmt.Println("SecretKeyper initialised for GPG Key -->", gpgKeyID)
 	},

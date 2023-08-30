@@ -65,7 +65,12 @@ SecretKeyper is an open source secure password manager designed to keep your sen
 
 ## 📦 Current State 
 - The API & CLI are ready to be used individually. 
-- However, their integration is under development. Some important features (to make the user-experience smoother) are yet to be implemented.
+- However, their integration is under development. Some features are yet to be implemented.
+
+## Requirements: 
+- [GnuPG](https://www.gnupg.org/): Since Keyper-CLI uses GnuPG (or GPG) file protection under the hood, it's necessary that you install it.
+    * [Check out this](./docs/Backend/keyper-cli/gpg.md) for an easy walk-through.
+
 
 ## Getting Started
 
@@ -153,7 +158,7 @@ or,
 ```sh
 source ~/.bashrc
 ```
-4. VOILA! You're ready to go! 😎
+4. **[Click for a walk-through](./docs/Backend/keyper-cli/sample_cmds.md)**
 
 ## 📝 TODO:
 
@@ -175,17 +180,19 @@ source ~/.bashrc
   - [x] `keyper generate <website>`
   - [x] `keyper find <website>`
   - [x] Change `keyper init` to `keyper init <GPG_KEY_ID>`
-  - [ ] `keyper git init`
-  - [ ] `keyper edit <website>` [Add meta data to your password.txt (now password.gpg)]
+  - [x] `keyper git init`
+  - [x] Add progress-bar
+
+    *Open to contribution*
+  - [ ] `keyper edit <website>` [Opens the file in a text-editor (nvim, vi - any!) to add meta data to your password.txt (now password.gpg)]
   - [ ] `keyper show <website>` [Lists available file + provides tab-completion]
   - [ ] `keyper grep "search-using-metaData"`
-  - [ ] Add progress-bar
 - [ ] Link CLI with API
 - [ ] Extension
 
 # 🤝 Contributing
 
-I appreciate your interest in contributing to the project. There are many ways to get involved and help improve this project.
+Your interest in contributing to the project is appreciated. There are many ways to get involved and help improve SecretKeyper.
 
 ### Ways to Contribute
 
