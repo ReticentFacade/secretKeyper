@@ -184,6 +184,8 @@ source ~/.bashrc
   - [x] `keyper find <website>`
   - [ ] `keyper init <GPG_KEY_ID>`
   - [ ] `keyper git init`
-  - [ ] Add progress-bar (?)
+  - [ ] `keyper edit <website>` [Add meta data to your password.txt (now password.gpg)]
+  - [ ] `keyper show <website>` [Lists available file + provides tab-completion]
+  - [ ] Add progress-bar
 - [ ] Link CLI with API
 - [ ] Extension
