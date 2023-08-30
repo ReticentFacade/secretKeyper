@@ -45,6 +45,13 @@ var insertCmd = &cobra.Command{
 		}
 		fmt.Println("Dw, Imma use: ", password)
 
+		// Get the GPG key ID from the .gpg-id file
+		gpgKeyIDFile := filepath.Join(secretKeyperDir, ".gpg-id")
+		gpgKeyID, err := utils.ReadGPGKeyID(gpgKeyIDFile)
+		if err != nil {
+			log.Fatal("Error reading GPG key ID from file:", err)
+		}
+
 		websiteDir := filepath.Join(secretKeyperDir, website)
 		dirExists, _ := utils.IfDirExists(websiteDir)
 
@@ -58,10 +65,11 @@ var insertCmd = &cobra.Command{
 			if err == nil {
 				// means dir is created
 				pwFilePath := filepath.Join(dirPath, "password.txt")
-				_, err := utils.CreatePasswordFile(pwFilePath, password)
-				if err == nil {
-					fmt.Println("pwFile successfully created!")
+				err := utils.EncryptWithGPG(password, gpgKeyID, pwFilePath) // Use the same file path with .gpg extension
+				if err != nil {
+					log.Fatal("Error encrypting password: ", err)
 				}
+				fmt.Println("Encrypted password and saved as: ", pwFilePath+".gpg")
 			} else {
 				log.Fatal("Error creating directory ----> \n", err)
 			}
@@ -79,10 +87,13 @@ var insertCmd = &cobra.Command{
 			if err == nil {
 				// CASE 2.1: File = x
 				if !pwFileExists {
-					_, err := utils.CreatePasswordFile(pwFilePath, password)
+
+					// Encrypt the password using the stored GPG key ID
+					err := utils.EncryptWithGPG(password, gpgKeyID, pwFilePath+".gpg") // Use the same file path with .gpg extension
 					if err != nil {
-						log.Fatal("Error creating password file: ", err)
+						log.Fatal("Error encrypting password: ", err)
 					}
+					fmt.Println("Encrypted password and saved as: ", pwFilePath+".gpg")
 				} else {
 					// CASE 2.2: File = ✓
 					fmt.Println(`Cannot overwrite already existing pwfile with this command. Use "keyper update <website>" instead`)
@@ -101,14 +112,6 @@ var insertCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(insertCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
 	// insertCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
 	// insertCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

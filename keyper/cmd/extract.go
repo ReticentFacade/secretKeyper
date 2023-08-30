@@ -27,10 +27,19 @@ var extractCmd = &cobra.Command{
 		// Obtain the website name from the argument
 		websiteDir := filepath.Join(secretKeyperDir, args[0])
 
+		// ==============================================
+		// Get the GPG key ID from the .gpg-id file
+		gpgKeyIDFile := filepath.Join(secretKeyperDir, ".gpg-id")
+		gpgKeyID, err := utils.ReadGPGKeyID(gpgKeyIDFile)
+		if err != nil {
+			log.Fatal("Error reading GPG key ID from file:", err)
+		}
+		// ==============================================
+
 		// - Check if the websiteDir exists
 		dirExists, _ := utils.IfDirExists(websiteDir)
 		if dirExists {
-			pwFilePath := filepath.Join(websiteDir, "password.txt")
+			pwFilePath := filepath.Join(websiteDir, "password.txt.gpg")
 			pwFileExists, _ := utils.IfFileExists(pwFilePath)
 
 			// - If it does, check if it has a password file
@@ -40,14 +49,18 @@ var extractCmd = &cobra.Command{
 				if err != nil {
 					log.Fatal("error reading password file:", err)
 				} else {
-					fmt.Println("\nYour password is: ", string(pw))
-					// Copy the generated password to the clipboard
-					_ = utils.CopyToClipboard(string(pw))
-
-					fmt.Println("Password copied to clipboard!")
+					// Decrypt the password using the stored GPG key ID
+					decryptedPassword, err := utils.DecryptWithGPG(string(pw), gpgKeyID)
 					if err != nil {
-						log.Fatal("Error copying password to clipboard:", err)
+						log.Fatal("Error decrypting password: ", err)
 					}
+
+					fmt.Println("\nYour password is:", decryptedPassword)
+
+					// Copy the decrypted password to the clipboard
+					_ = utils.CopyToClipboard(decryptedPassword)
+					fmt.Println("Password copied to clipboard!")
+					// ==============================================
 				}
 			}
 			// - If it doesn't, check if it has sub-directories
@@ -58,10 +71,11 @@ var extractCmd = &cobra.Command{
 				// - If it does, read the password files from those sub-directories
 				subDirList, _ := utils.ListSubDirs(websiteDir)
 				fmt.Println(subDirList) // Print the list of subdirectories
-			} else {
-				// - If it doesn't, print an error message
-				fmt.Println("No subdirectories found in the directory.")
 			}
+			// else {
+			// 	// - If it doesn't, print an error message
+			// 	fmt.Println("No subdirectories found in the directory.")
+			// }
 		} else {
 			// - If it doesn't, print an error message
 			log.Fatal("Error: Website doesn't exist.")
@@ -75,14 +89,4 @@ var extractCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(extractCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// extractCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// extractCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

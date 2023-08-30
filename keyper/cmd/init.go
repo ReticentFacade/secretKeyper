@@ -32,7 +32,7 @@ var initCmd = &cobra.Command{
 		var gpgKeyID string
 		if len(args) == 1 {
 			gpgKeyID = args[0]
-			// Validate the GPG key ID or fingerprint here
+			// Verifying the GPG key ID/fingerprint:
 			verifyKey, err := utils.VerifyGPGKey(gpgKeyID)
 			if err != nil {
 				log.Fatal("Error verifying GPG key", err)
@@ -57,7 +57,6 @@ var initCmd = &cobra.Command{
 			fmt.Println("mkdir: Created .secretKeyper directory at --> ", secretKeyperDir)
 		} else {
 			fmt.Println("Directory already exists at -->", secretKeyperDir)
-			// fmt.Println("SecretKeyper initialized successfully")
 		}
 
 		// Store the GPG key in a file in .secretKeyper directory:
@@ -73,5 +72,4 @@ var initCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(initCmd)
-	// initCmd.Flags().BoolP("generate", "g", false, "Generate a new GPG key")
 }

@@ -59,16 +59,19 @@
 
 2. GnuPG:
   2.1. keyper init GPG_KEY_ID:
-   ☐ Provide them with a choice:
-   - Select one of the following options:
-      1. I want Keyper to generate a new GPG key for me
-      2. I already have a GPG key.
+   ✔ Change `keyper init` to `keyper init <GPG_KEY_ID>` @done (30/08/2023, 20:26:52)
 
-      Case 1:
-        - generate GPG_KEY_ID in the background 
-        ☐ fmt.Println(On it!)
-      Case 2: 
-        ☐ Please use `keyper init <GPG_KEY_ID>` :)
+   For Later: 
+      ☐ Provide them with a choice:
+      - Select one of the following options:
+          1. I want Keyper to generate a new GPG key for me
+          2. I already have a GPG key.
+
+          Case 1:
+            - generate GPG_KEY_ID in the background 
+            ☐ fmt.Println(On it!)
+          Case 2: 
+            ☐ Please use `keyper init <GPG_KEY_ID>` :)
 
    ☐ Store the generated key locally and remotely 
 
@@ -76,7 +79,6 @@
    ☐ Add a feature to generate a GPG key and store it in a file (also remotely, in the db)
    ☐ Should downloading this app automatically generate a GPG key for the user?
       - Or let them create a new key-pair using `gpg --gen-key`? 
-   ☐ Change the <keyper init> command from <keyper init [wesbite]> to <keyper init [GPG_Key_ID]>
 
   2.1. keyper git init:
    ☐ Initialises your secretkeyper-directory as a git repository
