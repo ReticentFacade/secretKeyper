@@ -175,16 +175,10 @@ source ~/.bashrc
   - [x] `keyper generate <website>`
   - [x] `keyper find <website>`
   - [ ] `keyper init <GPG_KEY_ID>`
-<<<<<<< HEAD
   - [ ] `keyper git init`
   - [ ] `keyper edit <website>` [Add meta data to your password.txt (now password.gpg)]
   - [ ] `keyper show <website>` [Lists available file + provides tab-completion]
   - [ ] Add progress-bar
-=======
-  - [ ] Integrate git for automatic synchronization between multiple machines
-    - [ ] `keyper git init`
-  - [ ] Add progress-bar (?)
->>>>>>> master
 - [ ] Link CLI with API
 - [ ] Extension
 
