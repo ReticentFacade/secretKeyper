@@ -2,13 +2,15 @@
 
 ![Project Logo](./logo.png)
 
-## Description:
+## 🧪 Description:
 
 SecretKeyper is an open source secure password manager designed to keep your sensitive information safe while providing the convenience of easy access. With integrated 2FA, your stored data is doubly protected against unauthorized access.
 
+[Click here to read why you should consider centralizing your `.env` management](https://medium.com/@tony.infisical/the-death-of-the-env-file-6d65bfc6ac5e)
+
 ## Application:
 
-- API
+- API & Web server
 - CLI: For those who prefer commands over conversations 😼
 <!-- - CLI: If terminal is your idea of a cozy place  -->
 
@@ -34,7 +36,7 @@ SecretKeyper is an open source secure password manager designed to keep your sen
 
 ---
 
-#### API:
+#### API & Web server:
 
 - Routes --> [click here](./docs/Backend/routes.md)
 - Sample `.env` --> [click here](./docs/Backend/sample_env.md)
@@ -61,19 +63,9 @@ SecretKeyper is an open source secure password manager designed to keep your sen
   - generate
 ```
 
-# Contributing
-
-We appreciate your interest in contributing to secretKeyper. Whether you're a developer, designer, or just a user with feedback, there are many ways to get involved and help us improve this project.
-
-### Ways to Contribute
-
-- **Bug Reports**: If you find a bug or issue, please [open a GitHub issue](https://github.com/ReticentFacade/secretKeyper/issues) with a detailed description.
-
-- **Feature Requests**: Have an idea for a new feature or improvement? Feel free to suggest it by opening an issue.
-
-- **Code Contributions**: If you're a developer, you can fork the repository, make your changes, and create a pull request. We welcome code contributions of all sizes.
-
-- **Documentation**: Improving documentation is always helpful. If you find areas where the documentation can be enhanced, please submit a pull request.
+## 📦 Current State 
+- The API & CLI are ready to be used individually. 
+- However, their integration is under development. Some important features (to make the user-experience smoother) are yet to be implemented.
 
 ## Getting Started
 
@@ -103,7 +95,7 @@ $ task run
 
 #### Test the App
 
-```sh
+```
 $ ./bin/keyper
 For those of you who type more than talk, here's a Golang CLI-tool to keep your secrets safe!
 
@@ -163,7 +155,7 @@ source ~/.bashrc
 ```
 4. VOILA! You're ready to go! 😎
 
-## TODO:
+## 📝 TODO:
 
 - [x] Authentication
 - [x] Strength
@@ -183,9 +175,29 @@ source ~/.bashrc
   - [x] `keyper generate <website>`
   - [x] `keyper find <website>`
   - [ ] `keyper init <GPG_KEY_ID>`
+<<<<<<< HEAD
   - [ ] `keyper git init`
   - [ ] `keyper edit <website>` [Add meta data to your password.txt (now password.gpg)]
   - [ ] `keyper show <website>` [Lists available file + provides tab-completion]
   - [ ] Add progress-bar
+=======
+  - [ ] Integrate git for automatic synchronization between multiple machines
+    - [ ] `keyper git init`
+  - [ ] Add progress-bar (?)
+>>>>>>> master
 - [ ] Link CLI with API
 - [ ] Extension
+
+# 🤝 Contributing
+
+I appreciate your interest in contributing to the project. There are many ways to get involved and help improve this project.
+
+### Ways to Contribute
+
+- **Bug Reports**: If you find a bug or issue, please [open a GitHub issue](https://github.com/ReticentFacade/secretKeyper/issues) with a detailed description.
+
+- **Feature Requests**: Have an idea for a new feature or improvement? Feel free to suggest it by opening an issue.
+
+- **Code Contributions**: If you're a developer, you can fork the repository, make your changes, and create a pull request.
+
+- **Documentation**: Improving documentation is always helpful. If you find areas where the documentation can be enhanced, please submit a pull request.
