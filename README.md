@@ -185,7 +185,7 @@ source ~/.bashrc
   - [x] Add progress-bar
 
     *Open to contribution*
-  - [ ] `keyper edit <website>` [Opens the file in a text-editor (nvim, vi - any!) to add meta data to your password.txt (now password.gpg)]
+  - [ ] `keyper edit <website>` [Opens the file in a text-editor (nvim, vi - any!) to add meta data to your decrypted password.txt.gpg]
   - [ ] `keyper show <website>` [Lists available file + provides tab-completion]
   - [ ] `keyper grep "search-using-metaData"`
   - [ ] Add features for `.env` - saving, sharing, importing variables into your projects
