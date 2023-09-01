@@ -2,7 +2,7 @@
 
 ![Project Logo](./logo.png)
 
-## 🧪 Description:
+## 📔 🧪 Description:
 
 SecretKeyper is an open source secure password manager designed to keep your sensitive information safe while providing the convenience of easy access. With integrated 2FA, your stored data is doubly protected against unauthorized access.
 
@@ -45,8 +45,11 @@ Upcoming features shall assist developers in keeping `.env` secure.
 - Sample OTP-requests --> [click here](./docs/Backend/sample_reqs/otp_reqs.md)
 
 #### CLI:
-
-- Automatically copies extracted passwords/text to your clipboard
+- https://asciinema.org/a/605769
+- Initializes git repository
+- Files are encrypted using GPG
+- Generates secure passwords 
+- Automatically copies extracted passwords/text to your clipboard for 90 seconds
 
 ```
 ➜  ~ keyper list
@@ -71,6 +74,7 @@ Upcoming features shall assist developers in keeping `.env` secure.
 ## Requirements: 
 - [GnuPG](https://www.gnupg.org/): Since Keyper-CLI uses GnuPG (or GPG) file protection under the hood, it's necessary that you install it.
     * [Check out this](./docs/Backend/keyper-cli/gpg.md) for an easy walk-through.
+- Git
 
 
 ## Getting Started
