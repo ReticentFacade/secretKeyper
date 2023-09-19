@@ -4,7 +4,7 @@
 
 ## 📔 Description:
 
-SecretKeyper is an open source secure password manager designed to keep your sensitive information safe while providing the convenience of easy access. With integrated 2FA, your stored data is doubly protected against unauthorized access.
+SecretKeyper is an open source secure password store designed to keep your sensitive information safe while providing the convenience of easy access. With integrated 2FA, your stored data is doubly protected against unauthorized access.
 
 Upcoming features shall assist developers in keeping `.env` secure.
 [Click here to read why you should consider centralizing your `.env` management](https://medium.com/@tony.infisical/the-death-of-the-env-file-6d65bfc6ac5e)
