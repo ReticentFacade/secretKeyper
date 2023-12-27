@@ -2,17 +2,17 @@
 
 ![Project Logo](./logo.png)
 
-## 📔 Description:
+## Description:
 
 SecretKeyper is an open source secure password store designed to keep your sensitive information safe while providing the convenience of easy access. With integrated 2FA, your stored data is doubly protected against unauthorized access.
 
-Upcoming features shall assist developers in keeping `.env` secure.
+Upcoming features shall assist developers in keeping `.env` secure. [I'm thinking something like this?](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*pJQUexTaSZN2HJMl.png)
 [Click here to read why you should consider centralizing your `.env` management](https://medium.com/@tony.infisical/the-death-of-the-env-file-6d65bfc6ac5e)
 
-## 🧪 Application:
+## Application:
 
 - API & Web server
-- CLI: For those who prefer commands over conversations 😼
+- CLI: For those who prefer commands over conversations 😼 
 <!-- - CLI: If terminal is your idea of a cozy place  -->
 
 ## Tech used
@@ -27,7 +27,7 @@ Upcoming features shall assist developers in keeping `.env` secure.
 
 - Golang
 
-## 🎉 Features
+## Features
 
 - **Secure Storage** --> Safely manage passwords, cards, and notes.
 - **2FA Support** --> Enhanced protection with time-based one-time passwords (TOTP)
@@ -67,17 +67,17 @@ Upcoming features shall assist developers in keeping `.env` secure.
   - generate
 ```
 
-## 📦 Current State 
+## Current State 
 - The API & CLI are ready to be used individually. 
 - However, their integration is under development. Some important features (for developers) are yet to be implemented.
 
-## 💻 Requirements: 
+## Requirements: 
 - [GnuPG](https://www.gnupg.org/): Since Keyper-CLI uses GnuPG (or GPG) file protection under the hood, it's necessary that you install it.
     * [Check out this](./docs/Backend/keyper-cli/gpg.md) for an easy walk-through.
 - Git
 
 
-## 👨‍💻 Getting Started
+## ‍ Getting Started
 
 #### Build the App
 
