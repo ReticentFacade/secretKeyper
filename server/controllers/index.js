@@ -1,5 +1,5 @@
 import { register, login } from "./Auth/authController.js";
-import { getCredentials, addCredentials, updateCredentials, deleteCredentials } from "./credentialsController.js";
+import { getCredentials, getAllCredentials, addCredentials, updateCredentials, deleteCredentials } from "./credentialsController.js";
 import { generateOTPSecret } from "./2FA/generateOTPSecret.controller.js";
 import { generateOTP } from "./2FA/generateOTP.controller.js";
 import { verifyOTP } from "./2FA/verifyOTP.controller.js";
@@ -10,6 +10,7 @@ const controllers = {
     register,
     login,
     getCredentials,
+    getAllCredentials,
     addCredentials,
     updateCredentials,
     deleteCredentials,

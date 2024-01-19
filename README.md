@@ -18,15 +18,21 @@ Upcoming features shall assist developers in keeping `.env` secure. [I'm thinkin
 
 ## Tech used
 
-### API:
+### API and Storage:
 
-- Nodejs
-- Expressjs
+- NodeJS
+- ExpressJS
 - MongoDB
 
 ### CLI:
 
 - Golang
+- GnuPG
+
+### Frontend: 
+
+- ReactJS
+- TailwindCSS
 
 ## Features
 
@@ -188,8 +194,6 @@ source ~/.bashrc
   - [x] Change `keyper init` to `keyper init <GPG_KEY_ID>`
   - [x] `keyper git init`
   - [x] Add progress-bar
-
-    *Open to contribution*
   - [ ] `keyper edit <website>` [Opens the file in a text-editor (nvim, vi - any!) to add meta data to your decrypted password.txt.gpg]
   - [ ] `keyper show <website>` [Lists available file + provides tab-completion]
   - [ ] `keyper grep "search-using-metaData"`
@@ -199,7 +203,7 @@ source ~/.bashrc
 
 # 🤝 Contributing
 
-Your interest in contributing to the project is appreciated. There are many ways to get involved and help improve SecretKeyper.
+This project is open to contribution. Your interest in contributing to the project is appreciated. There are many ways to get involved and help improve SecretKeyper.
 
 ### Ways to Contribute
 

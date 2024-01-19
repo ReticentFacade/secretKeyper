@@ -27,10 +27,10 @@ const register = async (req, res) => {
     if (user) {
       const otpSecret = await generateOTPSecret(username);
       console.log("This is otpSecret: ", otpSecret);
-      
+
       // jwtGenerateToken will generate token AND set the token as a (res.)cookie:
       let token = jwtGenerateToken(user._id, res);
-      
+
       console.log("User saved successfully: \n", user);
       console.log("Token generated 😈 ----> \n", token);
       res.status(201).json({ message: "User saved successfully" });
@@ -66,7 +66,7 @@ const login = async (req, res) => {
       if (verifyToken !== null) {
         console.log("Token verified successfully: ", verifyToken);
         console.log("User authenticated successfully :)");
-        res.status(200).json({ message: "User logged in successfully" });
+        res.status(200).json({ message: "User logged in successfully", token: token, username: user.username });
         // User is authenticated.
       } else {
         console.log("Oops! Token verification failed");

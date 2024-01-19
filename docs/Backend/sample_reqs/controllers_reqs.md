@@ -85,11 +85,7 @@ curl -X POST -H "Content-Type: application/json" -H "x-auth-token: eyJhbGciOiJIU
 ```
 
 Output: 
-<<<<<<< HEAD:docs/Backend/sample_controllers_reqs.md
-```json
-=======
 ```sh
->>>>>>> 2FA:docs/Backend/sample_reqs/controllers_reqs.md
 Credentials saved successfully :)
  {
   username: 'elle',
@@ -115,20 +111,12 @@ curl -X PUT -H "x-auth-token: <your-jwt-token> -d "username=<your-username>&webs
 ```
 
 Example: 
-<<<<<<< HEAD:docs/Backend/sample_controllers_reqs.md
-```js
-=======
 ```sh
->>>>>>> 2FA:docs/Backend/sample_reqs/controllers_reqs.md
 curl -X PUT -H "x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDMyM2E1ZjIzMmU5NDQ4MmQwOGRhMyIsImlhdCI6MTY5MTcyNjI0MywiZXhwIjoxNjkxODEyNjQzfQ.3le184iAXC-9MClhun4M4A-6yLyzymQW7RGaUVmnJbU" -d "username=elle&website=www.github.com&newPassword=newGithubPw" http://localhost:5000/api/credentials/updateCredentials | json
 ```
 
 Output: 
-<<<<<<< HEAD:docs/Backend/sample_controllers_reqs.md
-```js
-=======
 ```sh
->>>>>>> 2FA:docs/Backend/sample_reqs/controllers_reqs.md
 Credentials updated successfully :) {
   _id: new ObjectId("64d50f89b13a8530ff896eb0"),
   username: 'elle',

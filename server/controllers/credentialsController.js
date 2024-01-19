@@ -29,7 +29,7 @@ const addCredentials = async (req, res) => {
             },
           },
         },
-        { new: true, upsert: true }, // `Upsert` is used to create a new document if the user doesn't exist.
+        { new: true, upsert: true } // `Upsert` is used to create a new document if the user doesn't exist.
       );
       if (newCredentials) {
         console.log("Credentials saved successfully :) \n", newCredentials);
@@ -50,7 +50,7 @@ const getCredentials = async (req, res) => {
     console.log("getCredentials running...");
     const { username, website } = req.query;
 
-    // Not too sure if username should AGAIN be checked here: Check & fix later
+    // TODO: Not too sure if username should AGAIN be checked here: Check & fix later
     const usernameExists = await checkUsername(username);
     if (!usernameExists) {
       console.log("Username doesn't exist -_-");
@@ -60,16 +60,20 @@ const getCredentials = async (req, res) => {
     const user = await Credentials.findOne({ username });
 
     if (!user) {
-      console.log("User doesn't exist :(");
-      res.status(400).json({ message: "User doesn't exist" });
+      console.log("Credentials for this user don't yet exist :(");
+      res
+        .status(400)
+        .json({ message: "Credentials for this user don't yet exist" });
     } else {
       const credentials = user.credentials.find(
         (cred) => cred.website === website
       );
 
       if (!credentials) {
-        console.log("Credentials not found :(");
-        return res.status(400).json({ message: "Credentials not found" });
+        console.log("Credentials for the website not found :(");
+        return res
+          .status(400)
+          .json({ message: "Credentials for the website not found" });
       }
 
       console.log("Credentials found :)");
@@ -81,6 +85,42 @@ const getCredentials = async (req, res) => {
   } catch (err) {
     console.log("Error getting credentials: ", err);
     res.status(500).json({ message: "Error getting credentials" });
+  }
+};
+
+const getAllCredentials = async (req, res) => {
+  try {
+    console.log("Getting all credentials...");
+    const { username } = req.query;
+
+    const usernameExists = await checkUsername(username);
+    if (!usernameExists) {
+      console.log("Username doesn't exist");
+      return res.status(400).json({ message: "Username doesn't exist" });
+    }
+
+    const user = await Credentials.findOne({ username });
+    if (!user) {
+      console.log("Please add credentials first");
+      return res.status(404).json({ message: "Please add credentials first" });
+    }
+    const credentials = user.credentials.map((cred) => ({
+      website: cred.website,
+      password: aesDecrypt(cred.password),
+    }));
+
+    if (!credentials || credentials.length === 0) {
+      console.log("No credentials found");
+      return res.status(404).json({ message: "No credentials found" });
+    }
+
+    console.log("Credentials found: ", credentials);
+    res
+      .status(200)
+      .json({ message: "Credentials found", credentials: credentials });
+  } catch (err) {
+    console.log("Error getting credentials: ", err);
+    res.status(500).json({ message: "Error getting all credentials" });
   }
 };
 
@@ -127,8 +167,10 @@ const deleteCredentials = async (req, res) => {
     console.log(`Username you entered is: ${username}`);
     const usernameExists = await Credentials.exists({ username });
     if (!usernameExists) {
-      console.log(`Username ${username} doesn't exist -_-`);
-      res.status(400).json({ message: "Username doesn't exist" });
+      console.log(`Credentials for username ${username} don't exist -_-`);
+      res
+        .status(400)
+        .json({ message: "Credentials for that username don't exist" });
     }
 
     const deletedCredentials = await Credentials.findOneAndDelete(
@@ -141,17 +183,36 @@ const deleteCredentials = async (req, res) => {
       { new: true }
     );
 
+    //   if (deletedCredentials) {
+    //     console.log("Credentials deleted successfully: 🥳 ", deletedCredentials);
+    //     res.status(200).json({ message: "Credentials deleted successfully" });
+    //   } else {
+    //     console.log("Error deleting credentials :(");
+    //     res.status(500).json({ message: "Error deleting credentials" });
+    //   }
+    // } catch (err) {
+    //   console.log("Error deleting credentials: ", err);
+    //   res.status(500).json({ message: "Error deleting credentials" });
+    // }
     if (deletedCredentials) {
       console.log("Credentials deleted successfully: 🥳 ", deletedCredentials);
-      res.status(200).json({ message: "Credentials deleted successfully" });
+      return res
+        .status(200)
+        .json({ message: "Credentials deleted successfully" });
     } else {
       console.log("Error deleting credentials :(");
-      res.status(500).json({ message: "Error deleting credentials" });
+      return res.status(500).json({ message: "Error deleting credentials" });
     }
   } catch (err) {
     console.log("Error deleting credentials: ", err);
-    res.status(500).json({ message: "Error deleting credentials" });
+    return res.status(500).json({ message: "Error deleting credentials" });
   }
 };
 
-export { getCredentials, addCredentials, updateCredentials, deleteCredentials };
+export {
+  getCredentials,
+  getAllCredentials,
+  addCredentials,
+  updateCredentials,
+  deleteCredentials,
+};

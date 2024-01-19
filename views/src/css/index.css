@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+:root {
+  --main-bg-color: #161617;
+  --nav-bg-color: #1e1e1f;
+  --title-color: #16f20b;
+  --h2-color: #d8d9da;
+  --text-color: #089000;
+  --btn-color: #089000;
+  --checkbox-color: #089000;
+  /* --btn-color: #45446C; */
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: var(--title-color);
+}
+h2 {
+  color: var(--h2-color);
+}
+.btn {
+  background: var(--btn-color);
+}
+input[type="checkbox"] {
+  /* opacity: 0.7; */
+  /* accent-color: var(--checkbox-color); */
+  filter: var(--checkbox-color) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
+  /* accent-color: var(--checkbox-color); */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
